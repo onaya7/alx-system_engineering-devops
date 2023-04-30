@@ -7,7 +7,7 @@ apt-get install -y nginx
 #setup a html page for nginx
 mkdir -p /etc/nginx/html
 touch /etc/nginx/html/index.html
-echo "Hello World" > /etc/nginx/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html
 
 # nginx config
 echo "server {
@@ -16,7 +16,8 @@ echo "server {
         root /etc/nginx/html;
         index index.html;
         add_header X-Served-By $HOSTNAME;
-	}" > /etc/nginx/sites-available/default
+        }" > /etc/nginx/sites-available/default
 
 # restart the server
 service nginx restart
+
