@@ -6,7 +6,7 @@ sudo apt-get update
 sudo apt-get install -y nginx
 
 mkdir /etc/nginx/html
-echo "Hello World" > /etc/nginx/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html
 echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
 
 printf %s "server {
@@ -15,7 +15,7 @@ printf %s "server {
     root   /etc/nginx/html;
     index  index.html index.htm;
 location /redirect_me {
-        return 301 http://www.github.com/okekingscodes/;
+        return 301 http://www.github.com/onaya7/;
     }
     error_page 404 /404.html;
     location /404 {
