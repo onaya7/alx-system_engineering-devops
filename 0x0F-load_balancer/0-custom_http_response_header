@@ -3,7 +3,6 @@
 
 # install nginx
 apt-get  update ; apt-get -y install nginx
-echo "Hello World!" > /etc/nginx/html/index.html
 
 string="http {\n\tadd_header X-Served-By \"$HOSTNAME\";"
 sudo sed -i "s/http {/$string/" /etc/nginx/nginx.conf
